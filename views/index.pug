@@ -17,10 +17,14 @@ div(class="container")
 
         div(class="card-block")
             h3(class="card-title") Usage
-            pre
-                code= 'curl https://electric-boa.glitch.me/whoami'
+            div(class="card bg-inverse")
+                div(class="card-block")
+                    pre
+                        code(class="text-white")= '$ curl https://electric-boa.glitch.me/whoami'
 
         div(class="card-block")
             h3(class="card-title") Response
-            pre
-                code #{example}
+            div(class="card bg-inverse")
+                div(class="card-block")
+                    pre
+                        code(class="text-white") #{example}
