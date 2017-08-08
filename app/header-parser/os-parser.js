@@ -1,16 +1,18 @@
 
-const regex = /\((.)+?\)/g;
+var firstMatch = require('./first-match');
+
+var regex = /\((.)+?\)/g;
 
 module.exports = function (userAgent) {
-  var matches = userAgent.match(regex);
+  var match = firstMatch(userAgent, regex);
 
-  if (0 >= matches.length) {
-    throw 'Invalid user agent given.';
+  if (null === match) {
+    return match;
   }
 
-  var agent = matches[0].split('');
-  agent.splice(0, 1);
-  agent.pop();
+  var os = match.split('');
+  os.splice(0, 1);
+  os.pop();
 
-  return agent.join('');
+  return os.join('');
 };
