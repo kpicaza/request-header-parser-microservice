@@ -1,8 +1,8 @@
 
 var firstMatch = require('./first-match');
 
-var regex = /(([a-z])+-([A-Z])+)/g;
-
 module.exports = function (acceptLanguage) {
+  var regex = /(([a-z])+-([A-Z])+)/g;
+
   return firstMatch(acceptLanguage, regex);
 };

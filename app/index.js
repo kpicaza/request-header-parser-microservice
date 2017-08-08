@@ -5,8 +5,6 @@ var service = require('./header-parser/service');
 
 var app = express();
 
-process.env.PORT = 4200;
-
 app.get("/", function (request, response) {
   var view = pug.compileFile(path.resolve('views/index.pug'));
 

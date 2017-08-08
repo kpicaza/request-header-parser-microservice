@@ -1,9 +1,9 @@
 
 var firstMatch = require('./first-match');
 
-var regex = /\((.)+?\)/g;
-
 module.exports = function (userAgent) {
+  var regex = /\((.)+?\)/g;
+  
   var match = firstMatch(userAgent, regex);
 
   if (null === match) {
