@@ -5,16 +5,16 @@ var service = require('./header-parser/service');
 
 var app = express();
 
+process.env.PORT = 4200;
+
 app.get("/", function (request, response) {
   var view = pug.compileFile(path.resolve('views/index.pug'));
 
-  response.send(view({
-    example: JSON.stringify(service(request))
-  }));
+  response.send(view({example: JSON.stringify(service(request.headers))}));
 });
 
 app.get("/whoami", function (request, response) {
-  response.send(JSON.stringify(service(request)));
+  response.send(JSON.stringify(service(request.headers)));
 });
 
 var listener = app.listen(process.env.PORT, function () {
