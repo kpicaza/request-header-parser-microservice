@@ -1,0 +1,26 @@
+head
+    link(rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700")
+    link(rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons")
+
+    link(rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css")
+
+div(class="jumbotron text-white bg-danger")
+    div(class="container")
+        h1 Request Header Parser Microservice
+
+div(class="container")
+    div(class="card")
+        div(class="card-block")
+            h2(class="card-title") User story:
+
+            p(class="lead") #[strong User Story:] I can get the IP address, language and operating system for my browser.
+
+        div(class="card-block")
+            h3(class="card-title") Usage
+            pre
+                code= 'curl /whoami'
+
+        div(class="card-block")
+            h3(class="card-title") Correct response
+            pre
+                code #{example}
